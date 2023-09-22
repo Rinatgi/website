@@ -19,11 +19,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+
 from myblog.views import index
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("myblog.urls")),
+    path("blog/", include("myblog.urls"))
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
