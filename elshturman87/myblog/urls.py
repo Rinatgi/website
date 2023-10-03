@@ -10,3 +10,4 @@ urlpatterns = [
     path("blog/", views.PostView.as_view())
 
 ]
+ 
